@@ -1,7 +1,7 @@
 /*This code is applied to the whole page*/
         
 :root {
-    --header-color: rgb(99, 166, 255);
+    --pietsFiets_Blauw: rgb(99, 166, 255);
     --body-bg-color: rgb(74, 204, 184);
     --footer-color: rgb(69, 72, 78);
     --button-color: rgb(142, 223, 67);
@@ -26,16 +26,31 @@ html {
 body {
     /*code applied to the whole body of the page*/
     background-color: var(--body-bg-color);
+    margin: 0;
 }
 /*This code is for the header*/
 
-header {
-    /*code applied to mainheader*/
+.fullHeader {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--header-color);
+    z-index: 1000;
+}
+
+header {
+    /*code applied to mainheader*/
+    background-color: var(--pietsFiets_Blauw);
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px 3rem;
+}
+
+.secondHeader {
+    background-color: aliceblue;
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
     display: flex;
     align-items: center;
@@ -43,12 +58,6 @@ header {
     flex-direction: row;
     justify-content: center;
     padding: 10px 3rem;
-    z-index: 1000;
-}
-
-div.navHeader {
-    /*code applied to the div in the mainheader*/
-    display: flex;
 }
 
 #logo {
@@ -72,29 +81,40 @@ div.navHeader {
     color: #FFC72C;
 }
 
-.wholeSearchbar {
-    /*code applied to the whole searchbar*/
-    min-height: fit-content;
-    /* margin: 4rem 0 0 3rem; */
-    padding: 0;
-    position: inherit;
-}
+.search-box {
+    position: relative;
+    width: 200px;
+    margin: auto auto 10px auto;
+  }
+  
+  .search-box input {
+    width: 100%;
+    padding: 5px; /* Adjust padding to make space for the icon */
+    font-size: 16px;
+    margin: 0;
+    border-radius: 10px;
+    border: 1px solid aliceblue;
+  }
 
-input.inputSearchBar {
-    /*code applied to the inputdistrict of the searchbar*/
-    border: 2px solid black;
-    padding: 1%;
-}
-
-.searchBarIcon {
-    /*code applied to the icon in the searchbar*/
+  .search-box input:focus-visible {
+    outline: none;
+    border: 2px solid blue;
+  }
+  
+  
+  .search-box::after {
+    content: '\2315'; /* Unicode for magnifying glass */
     position: absolute;
-    width: 22px;
-    height: 22px;
-    border: 2px solid black;
-    margin-left: 146px;
-    margin-top: -27px;
-}
+    right: 0;
+    top: 45%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: gray; /* Customize the color as needed */
+  }
+  
+  .search-box.has-text::after {
+    opacity: 0; /* Hides the icon when there's text in the input */
+  }  
 
 #buttons {
     /*code applied to the div that contains all the buttons of the header (except for the shoppingcartbutton)*/
@@ -141,29 +161,30 @@ input.inputSearchBar {
 a.shoppingCartLink {
     /*code applied to the link of the shoppingcart*/
     border: none;
-    background-color: #242F35;
-    padding-top: 60%;
-    padding-right: 6px;
-    /* padding-left: 1px; */
-    border-radius: 19%;
-}
-
-.shoppingCartLink:hover {
-    /*code applied to the hovering effect of the link of the shoppingcart*/
-    background-color: #FFC72C;
 }
 
 .shoppingCartImage {
     /*code applied to the image of the shoppingcart*/
-    height: 40px;
+    height: 35px;
     margin-left: 0;
+    background-color: wheat;
+    padding: 3px;
+    border-radius: 10px;
+    transform: rotateY(180deg);
 }
+
+.shoppingCartImage:hover {
+    /*code applied to the hovering effect of the link of the shoppingcart*/
+    background-color: #FFC72C;
+} 
+
 /*This code is applied to all the tags at the middle part of the page*/
 
 #bodysection {
     /*code applied to the whole middle part of the page*/
     margin: 0 auto;
     padding: 0;
+    min-height: 60rem;
 }
 
 .sortList {
@@ -277,23 +298,9 @@ span.productText {
 /*This code is for the footer*/
 
 footer {
-    border: 2px solid black;
-    list-style-type: none;
-    overflow: hidden;
-    height: 2rem;
-    margin-top: 3%;
-    margin-left: -8px;
-    float: left;
-    white-space: nowrap;
-    position: fixed;
+    min-height: 20rem;
+    min-width: -webkit-fill-available;
+    background: var(--pietsFiets_Blauw);
+    position: relative;
     bottom: 0;
-    left: 0;
-    right: 0;
-    background: var(--footer-color);
-    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
-    padding: 0rem 14%;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    z-index: 1000;
 }
