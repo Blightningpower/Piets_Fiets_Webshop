@@ -94,41 +94,32 @@ header {
     margin: 0;
     border-radius: 10px;
     border: 1px solid aliceblue;
+    padding-right: 30px; /* Add padding for background icon */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ccc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M10 2a8 8 0 016.32 12.9l4.78 4.78-1.42 1.42-4.78-4.78A8 8 0 1110 2zm0 2a6 6 0 100 12 6 6 0 000-12z"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: right 5px center;
   }
-
+  
   .search-box input:focus-visible {
     outline: none;
     border: 2px solid blue;
   }
   
-  
-  .search-box::after {
-    content: '\2315'; /* Unicode for magnifying glass */
-    position: absolute;
-    right: 0;
-    top: 45%;
-    transform: translateY(-50%);
-    font-size: 30px;
-    color: gray; /* Customize the color as needed */
+  .search-box input:not(:placeholder-shown) {
+    background-image: none; /* Hide icon when text is entered */
   }
+
+#search-input::placeholder {
+    color: #dadada;
+}
   
-  .search-box.has-text::after {
-    opacity: 0; /* Hides the icon when there's text in the input */
-  }  
 
 #buttons {
     /*code applied to the div that contains all the buttons of the header (except for the shoppingcartbutton)*/
     padding: 0;
     width: -webkit-fill-available;
     max-height: 5vh;
-}
-
-#buttons button {
-    /*code applied to every individual button of the header (except for the shoppingcartbutton)*/
-    border: none;
-    background-color: var(--header-color);
-    padding: unset;
-    margin: 0 4px;
 }
 
 .button {
@@ -139,9 +130,8 @@ header {
     background-color: var(--button-color);
     display: inline-block;
     text-transform: uppercase;
-    padding: 6%;
+    padding: 0.8%;
     border-radius: 6px;
-    box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
     cursor: pointer;
     transition: all ease-in-out 300ms;
     color: var(--buttonText-color);
