@@ -1,15 +1,12 @@
 /*This code is applied to the whole page*/
-        
+
 :root {
     --pietsFiets_Blauw: rgb(99, 166, 255);
-    --body-bg-color: rgb(74, 204, 184);
-    --footer-color: rgb(69, 72, 78);
-    --button-color: rgb(142, 223, 67);
-    --buton-hover-color: rgb(110, 185, 52);
-    --buttonText-color: rgb(255, 255, 255);
-    --buttonText-hover-color: rgb(240, 240, 240);
+    --pietFiets_Wit: #f2f2f2;
+    --pietsFiets-Zwart: #333333;
     --link-color: rgb(46, 184, 175);
-  }
+    --link-Hover-color: rgb(133, 103, 220);
+}
 
 * {
     /*code applied to all HTML tags*/
@@ -25,9 +22,39 @@ html {
 
 body {
     /*code applied to the whole body of the page*/
-    background-color: var(--body-bg-color);
+    background-color: #fff;
     margin: 0;
 }
+
+main {
+    min-height: 100vh;
+    padding-top: 9rem;
+}
+
+img {
+    max-width: 30rem;
+    max-height: 10rem;
+    padding: 10px;
+}
+
+a {
+    color: var(--link-color)
+}
+
+a:hover {
+    color: var(--link-Hover-color)
+}
+
+p {
+    color: #000;
+}
+
+h1,
+h2 {
+    color: #000;
+    max-height: fit-content;
+}
+
 /*This code is for the header*/
 
 .fullHeader {
@@ -40,9 +67,9 @@ body {
 
 header {
     /*code applied to mainheader*/
-    background-color: var(--pietsFiets_Blauw);
+    background-color: var(--pietsFiets-Zwart);
     display: flex;
-    align-items: center;
+    align-items: baseline;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: flex-start;
@@ -50,7 +77,7 @@ header {
 }
 
 .secondHeader {
-    background-color: aliceblue;
+    background-color: black;
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
     display: flex;
     align-items: center;
@@ -63,57 +90,77 @@ header {
 #logo {
     /*code applied to headerlogo*/
     max-height: 5rem;
-    border: 2px solid black;
     border-radius: 25px;
 }
 
-#headerTitle {
-    /*code applied to headertitle*/
-    font-size: 3vh;
-    color: #fff;
-    font-weight: bold;
-    animation: animatetext 2s;
-    margin: 0 0 0 1rem;
+main .promo {
+    background: #eee;
+    padding: 5%;
+    text-align: center;
+    min-height: 6rem;
 }
 
-#wellBeeingHeaderTitle span {
-    /*code applied to headertitles span*/
-    color: #FFC72C;
+.product-categorie {
+    display: grid;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.producten {
+    padding: 0 10rem;
+    display: flex;
+}
+
+.product {
+    text-align: center;
+}
+
+.product .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: .375rem;
+}
+
+.product .btn:hover {
+    background-color: var(--link-Hover-color);
+    box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
+    transform: translate(0px, -10px) scale(1.2);
 }
 
 .search-box {
     position: relative;
     width: 200px;
     margin: auto auto 10px auto;
-  }
-  
-  .search-box input {
+}
+
+.search-box input {
     width: 100%;
-    padding: 5px; /* Adjust padding to make space for the icon */
+    padding: 5px;
+    /* Adjust padding to make space for the icon */
     font-size: 16px;
     margin: 0;
     border-radius: 10px;
     border: 1px solid aliceblue;
-    padding-right: 30px; /* Add padding for background icon */
+    padding-right: 30px;
+    /* Add padding for background icon */
     background-image: url('data:image/svg+xml;utf8,<svg fill="%23ccc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M10 2a8 8 0 016.32 12.9l4.78 4.78-1.42 1.42-4.78-4.78A8 8 0 1110 2zm0 2a6 6 0 100 12 6 6 0 000-12z"/></svg>');
     background-repeat: no-repeat;
     background-size: 20px;
     background-position: right 5px center;
-  }
-  
-  .search-box input:focus-visible {
+}
+
+.search-box input:focus-visible {
     outline: none;
     border: 2px solid blue;
-  }
-  
-  .search-box input:not(:placeholder-shown) {
-    background-image: none; /* Hide icon when text is entered */
-  }
-
-#search-input::placeholder {
-    color: #dadada;
 }
-  
+
+.search-box input:not(:placeholder-shown) {
+    background-image: none;
+    /* Hide icon when text is entered */
+}
 
 #buttons {
     /*code applied to the div that contains all the buttons of the header (except for the shoppingcartbutton)*/
@@ -122,10 +169,10 @@ header {
     max-height: 5vh;
 }
 
-.button {
+.menuButton {
     /*code applied to every individual buttons link of the header (except for the shoppingcartbutton)*/
-    font-size: 11px;
-    font-weight: bolder;
+    font-size: 0.8em;
+    font-weight: normal;
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--button-color);
     display: inline-block;
@@ -134,31 +181,26 @@ header {
     border-radius: 6px;
     cursor: pointer;
     transition: all ease-in-out 300ms;
-    color: var(--buttonText-color);
+    color: var(--pietFiets_Wit);
 }
 
-.button:hover {
+.menuButton:hover {
     box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
     transform: translate(0px, -10px) scale(1.2);
 }
 
 .shoppingCart {
     /*code applied to the whole shoppingcart*/
-    max-width: 10px;
-    max-height: 10px;
-}
-
-a.shoppingCartLink {
-    /*code applied to the link of the shoppingcart*/
-    border: none;
+    max-width: 52px;
+    max-height: 42px;
 }
 
 .shoppingCartImage {
     /*code applied to the image of the shoppingcart*/
     height: 35px;
     margin-left: 0;
-    background-color: wheat;
-    padding: 3px;
+    background-color: lightblue;
+    padding: 3px 10px 3px 3px;
     border-radius: 10px;
     transform: rotateY(180deg);
 }
@@ -166,7 +208,8 @@ a.shoppingCartLink {
 .shoppingCartImage:hover {
     /*code applied to the hovering effect of the link of the shoppingcart*/
     background-color: #FFC72C;
-} 
+    transform: translate(0px, -10px) scale(1.2);
+}
 
 /*This code is applied to all the tags at the middle part of the page*/
 
@@ -222,12 +265,13 @@ a.shoppingCartLink {
 
 .product {
     /*code applied to the every individual productbox (included the productLookButton)*/
-    height: 1vh;
+    min-height: 1vh;
     padding: 10px;
-    font-size: 11px;
-    color: #FFC640;
+    color: #000;
     text-align: center;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #product1,
@@ -278,19 +322,28 @@ span.productText {
 
 .productLookButton a {
     /*code applied to every products buttonlink*/
-    color: var(--buttonText-color);
+    color: var(--pietFiets_Wit);
 }
 
 .productLookButton a:hover {
     /*code applied for the hovering effect of every products buttonlink*/
     color: var(--buttonText-hover-color);
 }
+
 /*This code is for the footer*/
 
 footer {
     min-height: 20rem;
     min-width: -webkit-fill-available;
-    background: var(--pietsFiets_Blauw);
+    background: var(--pietsFiets-Zwart);
     position: relative;
     bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.creditText {
+    color: #fff;
+    text-align: center;
 }
