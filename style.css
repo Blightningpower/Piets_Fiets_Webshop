@@ -347,3 +347,110 @@ footer {
     color: #fff;
     text-align: center;
 }
+
+.form-section {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--pietsFiets_Blauw);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--link-Hover-color);
+}
+
+/* Styling voor de account en winkelmand tabellen */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+/* Specifieke styling voor de winkelmand overzicht */
+.winkelmand-overzicht {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    font-size: 0.9em;
+}
+
+table td[colspan] {
+    text-align: right;
+    font-weight: bold;
+}
+
+.winkelmand-overzicht button {
+    margin-top: 20px;
+    width: auto;
+    padding: 10px 20px;
+}
+
+/* Specifieke styling voor de contactpagina */
+.contact-info {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
