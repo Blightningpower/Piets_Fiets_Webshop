@@ -5,7 +5,7 @@
     --pietFiets_Wit: #f2f2f2;
     --pietsFiets-Zwart: #333333;
     --link-color: rgb(46, 184, 175);
-    --link-Hover-color: rgb(133, 103, 220);
+    --link-Hover-color: #FFC72C;
 }
 
 * {
@@ -32,9 +32,7 @@ main {
 }
 
 img {
-    max-width: 30rem;
-    max-height: 10rem;
-    padding: 10px;
+   margin: auto;
 }
 
 a {
@@ -46,11 +44,15 @@ a:hover {
 }
 
 p {
-    color: #000;
+    color: var(--pietFiets_Wit);
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #000;
     max-height: fit-content;
 }
@@ -69,7 +71,7 @@ header {
     /*code applied to mainheader*/
     background-color: var(--pietsFiets-Zwart);
     display: flex;
-    align-items: baseline;
+    align-items: center;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: flex-start;
@@ -127,7 +129,17 @@ main .promo {
 .product .btn:hover {
     background-color: var(--link-Hover-color);
     box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
-    transform: translate(0px, -10px) scale(1.2);
+    transform: scale(1.2);
+}
+
+.producten .product p {
+    color: #000;
+}
+
+.producten .product img {
+    max-width: 30rem;
+    max-height: 10rem;
+    padding: 10px;
 }
 
 .search-box {
@@ -139,13 +151,11 @@ main .promo {
 .search-box input {
     width: 100%;
     padding: 5px;
-    /* Adjust padding to make space for the icon */
     font-size: 16px;
     margin: 0;
     border-radius: 10px;
-    border: 1px solid aliceblue;
+    border: 2px solid lightblue;
     padding-right: 30px;
-    /* Add padding for background icon */
     background-image: url('data:image/svg+xml;utf8,<svg fill="%23ccc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M10 2a8 8 0 016.32 12.9l4.78 4.78-1.42 1.42-4.78-4.78A8 8 0 1110 2zm0 2a6 6 0 100 12 6 6 0 000-12z"/></svg>');
     background-repeat: no-repeat;
     background-size: 20px;
@@ -154,7 +164,7 @@ main .promo {
 
 .search-box input:focus-visible {
     outline: none;
-    border: 2px solid blue;
+    border: 2px solid var(--link-Hover-color);
 }
 
 .search-box input:not(:placeholder-shown) {
@@ -162,15 +172,14 @@ main .promo {
     /* Hide icon when text is entered */
 }
 
+
 #buttons {
-    /*code applied to the div that contains all the buttons of the header (except for the shoppingcartbutton)*/
     padding: 0;
     width: -webkit-fill-available;
     max-height: 5vh;
 }
 
 .menuButton {
-    /*code applied to every individual buttons link of the header (except for the shoppingcartbutton)*/
     font-size: 0.8em;
     font-weight: normal;
     font-family: Arial, Helvetica, sans-serif;
@@ -186,13 +195,15 @@ main .promo {
 
 .menuButton:hover {
     box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
-    transform: translate(0px, -10px) scale(1.2);
+    transform: scale(1.2);
+    color: var(--link-Hover-color);
 }
 
 .shoppingCart {
     /*code applied to the whole shoppingcart*/
     max-width: 52px;
     max-height: 42px;
+    margin-right: 2rem;
 }
 
 .shoppingCartImage {
@@ -205,10 +216,21 @@ main .promo {
     transform: rotateY(180deg);
 }
 
-.shoppingCartImage:hover {
+.shoppingCart:hover .shoppingCartImage {
     /*code applied to the hovering effect of the link of the shoppingcart*/
-    background-color: #FFC72C;
-    transform: translate(0px, -10px) scale(1.2);
+    background-color: var(--link-Hover-color);
+    transform: scale(1.2);
+}
+
+.myAccountImg {
+    transition: transform 0.8s ease, content 0.8s ease;
+    /* Voegt een vloeiende overgang toe */
+}
+
+.myAccountLink:hover .myAccountImg {
+    content: url('img/User icon_hover.png');
+    transform: rotate(360deg);
+    /* Voegt 360 graden rotatie toe */
 }
 
 /*This code is applied to all the tags at the middle part of the page*/
@@ -341,12 +363,38 @@ footer {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    flex-direction: column;
 }
+
+.flexFooterItems {
+    display: flex;
+    margin: auto;
+}
+
+.flexFooterItems div {
+    margin: auto;
+}
+
+footer h4{
+    color: var(--pietFiets_Wit);
+}
+
+.footerLogo {
+    max-width: 16em;
+    min-width: 13em;
+    margin: 0 15rem;
+    border-radius: 50px;
+}
+
+.socialIcon {margin: 0 10px;width: 3rem;}
 
 .creditText {
     color: #fff;
     text-align: center;
+    margin: auto;
 }
+
+/* ---- */
 
 .form-section {
     background-color: #f8f8f8;
@@ -399,12 +447,15 @@ table {
     margin-top: 20px;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid #ddd;
     text-align: center;
 }
 
-th, td {
+th,
+td {
     padding: 10px;
     background-color: #f9f9f9;
 }
@@ -422,7 +473,8 @@ th {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-table th, table td {
+table th,
+table td {
     font-size: 0.9em;
 }
 
