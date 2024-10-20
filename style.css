@@ -28,7 +28,7 @@ body {
 
 main {
     min-height: 100vh;
-    padding-top: 9rem;
+    padding-top: 15rem;
 }
 
 img {
@@ -45,6 +45,10 @@ a:hover {
 
 p {
     color: var(--pietFiets_Wit);
+}
+
+main p {
+    color:  black;
 }
 
 h1,
@@ -76,6 +80,7 @@ header {
     flex-direction: row;
     justify-content: flex-start;
     padding: 10px 3rem;
+    margin: unset;
 }
 
 .secondHeader {
@@ -96,10 +101,23 @@ header {
 }
 
 main .promo {
-    background: #eee;
+    background: var(--pietsFiets_Blauw);
     padding: 5%;
     text-align: center;
     min-height: 6rem;
+    display: flex;
+}
+
+main .promo h1, main .promo p {
+    color: yellow;
+}
+
+main .promo p {
+    font-size: large;
+}
+
+.ourProductsText {
+    text-align: center;
 }
 
 .product-categorie {
@@ -117,16 +135,18 @@ main .promo {
     text-align: center;
 }
 
-.product .btn {
+.btn {
     background-color: #007bff;
     color: white;
     padding: 10px;
     text-decoration: none;
     display: inline-block;
     border-radius: .375rem;
+    max-width: fit-content;
+    margin: 1rem;
 }
 
-.product .btn:hover {
+.btn:hover {
     background-color: var(--link-Hover-color);
     box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
     transform: scale(1.2);
@@ -173,7 +193,7 @@ main .promo {
 }
 
 
-#buttons {
+#menuButtonNav {
     padding: 0;
     width: -webkit-fill-available;
     max-height: 5vh;
