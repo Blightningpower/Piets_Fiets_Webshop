@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
-    
+
     <!--links for the Favicons-->
     <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon_io/favicon-32x32.png">
@@ -13,47 +14,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
-    
-    <title>Mijn Account - Piets Fiets</title>
+
+    <title>Mijn Account</title>
+
+    <!--links for stylesheets-->
     <link rel="stylesheet" href="../style.css">
+
 </head>
+
 <body>
+
+    <!--This code is for the header-->
     <div class="fullHeader">
         <header>
-            <../img id="logo" src="../../img/Piets_Fiets_Webshop Logo.png" alt="Piets_Fiets_Webshop Logo">
+
+            <a href="../index.html"><img id="logo" src="../img/Piets_Fiets_Webshop Logo.png"
+                    alt="Piets_Fiets_Webshop Logo.png"></a>
+
             <div class="search-box">
                 <input type="text" id="search-input" placeholder="Zoeken.." />
             </div>
+
             <div class="shoppingCart">
-                <a href="#" class="shoppingCartLink">
-                    <../img class="shoppingCartImage" src="../../img/Shoppingcart.png" alt="Winkelmandje">
-                </a>
+                <a href="../html/shoppingCart.html" class="shoppingCartLink"><img class="shoppingCartImage"
+                        src="../img/Shoppingcart.png" alt="Shoppingcart.png">
             </div>
+
+            <div class="myAccount">
+                <a href="../html/logIn.html" class="myAccountLink"><img class="myAccountImg" src="../img/User icon.png"
+                        alt="User icon.png">
+            </div>
+
         </header>
         <div class="secondHeader">
-            <div id="buttons">
+
+            <div id="menuButtonNav">
                 <a class="menuButton" href="../index.html">Home</a>
-                <a class="menuButton" href="#">Fietsen</a>
-                <a class="menuButton" href="#">Fietskleding</a>
-                <a class="menuButton" href="#">Accessoires</a>
-                <a class="menuButton" href="#">Contact</a>
+                <a class="menuButton" href="../html/fietsen.html">Fietsen</a>
+                <a class="menuButton" href="../html/fietskleding.html">Fietskleding</a>
+                <a class="menuButton" href="../html/accessoires.html">Accessoires</a>
+                <a class="menuButton" href="../html/contact.html">Contact</a>
             </div>
+
         </div>
     </div>
+    <!-- --- -->
 
     <main>
-        <section>
-            <h2>Mijn Bestellingen</h2>
-            <table>
-                <tr><th>Product</th><th>Beschrijving</th><th>Bestelnummer</th><th>Datum</th></tr>
-                <tr><td>Fiets</td><td>Mountainbike</td><td>12345</td><td>01-01-2023</td></tr>
-                <tr><td>Fietskleding</td><td>Regenjack</td><td>67890</td><td>05-02-2023</td></tr>
-            </table>
-        </section>
-    </main>
+        <h1>Mijn Account</h1>
+    
+        <aside class="account-sidebar">
+            <ul>
+                <li class="active">Mijn Bestellingen</li>
+                <li>Mijn Gegevens</li>
+                <li>Uitloggen</li>
+            </ul>
+        </aside>
 
+    <div class="centerOrederTable">
+        <h2>Mijn Bestellingen</h2>
+        <iframe class="order-iframe" src="bestellingen.html"></iframe>
+    </div>
+
+    </main>
+    
+    
+
+
+    <!-- This is the footer code -->
     <footer>
-        <p class="creditText">&copy; 2024 Piets Fiets - <a href="#">Privacybeleid</a> | <a href="#">Algemene Voorwaarden</a></p>
+
+        <div class="flexFooterItems">
+
+            <div class="bedrijfsInfo">
+                <h4>Contact</h4>
+                <p>Piets Fiets</p>
+                <p>Fietsenstraat 12</p>
+                <p>1234 AB Amsterdam, Nederland</p>
+                <br>
+                <a href="#">+31 20 123 4567</a>
+                <br><br>
+                <a href="#">info@pietsfiets.nl</a>
+                <br><br>
+            </div>
+
+            <a href="../index.html"><img src="../img/Piets_Fiets_Webshop Logo.png" alt="Piets_Fiets_Webshop Logo.png"
+                    class="footerLogo"></a>
+
+            <div class="socials">
+                <a href="#"><img src="../img/facebook_icon.png" alt="facebook_icon.png" class="socialIcon"></a>
+                <a href="#"><img src="../img/instagram_icon.png" alt="instagram_icon.png" class="socialIcon"></a>
+                <a href="#"><img src="../img/whatsapp_icon.png" alt="whatsapp_icon.png" class="socialIcon"></a>
+                <a href="#"><img src="../img/youtube_icon.png" alt="youtube_icon.png" class="socialIcon"></a>
+            </div>
+
+        </div>
+
+        <p class="creditText">&copy; 2024 Piets Fiets - <a href="#">Privacybeleid</a> | <a href="#">Algemene
+                Voorwaarden</a>
+        </p>
+
     </footer>
+    <!-- --- -->
+
 </body>
+
 </html>

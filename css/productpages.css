@@ -1,0 +1,105 @@
+.product-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+hr {
+    margin: 0 2rem;
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 50vw;
+    min-height: 40vh;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 8vh auto auto auto;
+}
+
+.product-image img {
+    width: 300px;
+    height: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.product-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    max-width: 50%;
+}
+
+.product-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.product-details p {
+    margin-bottom: 20px;
+}
+
+.product-price {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin: 20px;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 80px;  /* Groter invoerveld */
+    height: 80px; /* Groter invoerveld */
+}
+
+input[type="number"] {
+    font-size: 1.3rem;  /* Grotere getallen */
+    width: 40px;      /* Grotere breedte van het invoerveld */
+    height: 20px;     /* Grotere hoogte van het invoerveld */
+    padding: 10px;    /* Meer ruimte binnenin het invoerveld */
+}
+
+/* Voor WebKit-browsers (Chrome, Safari) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    margin: 0; /* Geen marges om maximale ruimte te benutten */
+    -webkit-appearance: auto; /* Gebruik de standaard spinnerstijl */
+    appearance: auto; /* Gebruik de standaard spinnerstijl */
+    width: auto; /* Laat de browser de juiste breedte bepalen */
+    height: auto; /* Laat de browser de juiste hoogte bepalen */
+}
+
+.product-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.product-rating {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.star {
+    font-size: 2rem;
+    color: #ffcc00;
+}
+
+.star.half {
+    color: #ccc;
+}
+
+.totalSection {
+    display: flex;
+    padding-left: 50%;
+    align-items: center;
+    margin: auto 0;
+}
