@@ -55,8 +55,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
     color: #000;
     max-height: fit-content;
     text-align: center;
@@ -266,58 +265,6 @@ input:focus-visible, textarea:focus-visible {
     /* Voegt 360 graden rotatie toe */
 }
 
-/*This code is applied to all the tags at the middle part of the page*/
-
-#bodysection {
-    /*code applied to the whole middle part of the page*/
-    margin: 0 auto;
-    padding: 0;
-    min-height: 60rem;
-}
-
-.sortList {
-    /*code applied to the whole sortlist aside from the page*/
-    background-color: #FFC640;
-    font-size: 15px;
-    border: 1px solid black;
-    bottom: 21vw;
-    left: 65rem;
-    float: left;
-    overflow: hidden;
-    width: 15%;
-    padding: 1vw;
-    color: black;
-}
-
-.sortListHead {
-    /*code applied to the summary of the sortlist*/
-    font-weight: 600;
-}
-
-.sortListItemButton {
-    /*code applied to the every button within the sortlist*/
-    background-color: #FFC640;
-    border: none;
-}
-
-.sortListItemButton:hover {
-    /*code applied for the hovering effect of every button within the sortlist*/
-    background-color: #262626;
-    color: white !important;
-}
-
-.sortListLink {
-    /*code applied to the every link within the sortlist*/
-    text-decoration: none;
-    color: black;
-}
-
-#productsDiv {
-    /*code applied to the container which contains all the products*/
-    margin: auto;
-    padding: 10% 17% 10% 17%;
-}
-
 .product {
     /*code applied to the every individual productbox (included the productLookButton)*/
     min-height: 1vh;
@@ -327,62 +274,6 @@ input:focus-visible, textarea:focus-visible {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#product1,
-#product2,
-#product3,
-#product4,
-#product5,
-#product6,
-#product7,
-#product8,
-#product9 {
-    /*code applied to the every individual productbox (productLookButton NOT included)*/
-    width: 10vw;
-    border: 2px solid black;
-    margin: 69px 0 0;
-    background-color: white;
-}
-
-.productImg {
-    /*code applied to the every products images*/
-    max-width: fit-content;
-}
-
-span.productText {
-    /*code applied to the every products texts*/
-    font-size: 11px;
-    color: #FFC640;
-    position: relative;
-    top: 0;
-}
-
-.productLookButton {
-    /*code applied to the every products button*/
-    font-weight: bold;
-    font-size: 10px;
-    overflow: hidden;
-    margin: 0 5px;
-    background-color: var(--button-color);
-    padding: 4px;
-    border-radius: 7px;
-}
-
-.productLookButton:hover {
-    /*code applied for the hovering effect of every products button*/
-    background-color: var(--buton-hover-color);
-    color: var(--buttonText-hover-color);
-}
-
-.productLookButton a {
-    /*code applied to every products buttonlink*/
-    color: var(--pietFiets_Wit);
-}
-
-.productLookButton a:hover {
-    /*code applied for the hovering effect of every products buttonlink*/
-    color: var(--buttonText-hover-color);
 }
 
 /*This code is for the footer*/
@@ -536,7 +427,6 @@ form label {
 /* Specifieke styling voor de winkelmand overzicht */
 .winkelmand-overzicht {
     background-color: #f8f8f8;
-    padding: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -545,6 +435,31 @@ form label {
     margin-top: 20px;
     width: auto;
     padding: 10px 20px;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.3rem;  /* Grotere getallen */
+    width: 40px;      /* Grotere breedte van het invoerveld */
+    height: 20px;     /* Grotere hoogte van het invoerveld */
+    padding: 10px;    /* Meer ruimte binnenin het invoerveld */
+    margin: auto;
+}
+
+.delete-btn {
+    background-color: #f0f0f0;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+}
+
+.delete-btn:hover {
+    background-color: #f00;
+    border: 1px solid darkred;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 /* Log in Pagina */
@@ -591,7 +506,8 @@ form label {
 .order-table th, .order-table td {
     padding: 15px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
+    border-bottom: 2px solid #ddd;
 }
 
 .order-table thead {
@@ -606,7 +522,11 @@ form label {
 .order-table th {
     padding: 15px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
+}
+
+.rowHover {
+    height: 10rem;
 }
 
 .rowHover:hover {

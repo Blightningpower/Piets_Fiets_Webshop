@@ -51,22 +51,6 @@ hr {
     margin: 20px;
 }
 
-.quantity-selector {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    width: 80px;  /* Groter invoerveld */
-    height: 80px; /* Groter invoerveld */
-}
-
-input[type="number"] {
-    font-size: 1.3rem;  /* Grotere getallen */
-    width: 40px;      /* Grotere breedte van het invoerveld */
-    height: 20px;     /* Grotere hoogte van het invoerveld */
-    padding: 10px;    /* Meer ruimte binnenin het invoerveld */
-}
-
 /* Voor WebKit-browsers (Chrome, Safari) */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
