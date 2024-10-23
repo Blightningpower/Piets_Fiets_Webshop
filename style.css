@@ -362,6 +362,7 @@ input:focus-visible, textarea:focus-visible {
     height: 4vh;
     width: 2.5vw;
     min-width: 3rem;
+    min-height: 2.5rem;
     margin-left: 0;
     background-color: lightblue;
     padding: 3px 10px 3px 3px;
