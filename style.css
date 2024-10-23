@@ -462,6 +462,11 @@ form label {
     cursor: pointer;
 }
 
+.checkout-summary {
+    max-width: fit-content;
+    margin-left: 75vw;
+}
+
 /* Log in Pagina */
 
 .logInLogo {
