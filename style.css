@@ -128,7 +128,18 @@ main .promo p {
 .product-categorie {
     display: grid;
     justify-content: center;
-    margin: 2rem 0;
+    margin: 2rem auto;
+    width: fit-content;
+}
+
+@media only screen and (max-width: 1070px) {
+    .product-categorie {
+        width: 2vw;
+    }
+
+    .producten, .product {
+        padding: unset !important;
+    }
 }
 
 .producten {
@@ -174,6 +185,114 @@ main .promo p {
     position: relative;
     width: 200px;
     margin: auto auto 10px auto;
+}
+
+@media only screen and (max-width: 700px) {
+    .search-box {
+        display: none;
+    }
+
+    #logo {
+        margin-right: 32vw;
+    }
+
+    /* Verberg het standaard menu */
+    #menuButtonNav {
+        display: none;
+    }
+
+    /* Maak het hamburger menu zichtbaar */
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        z-index: 1000;
+        position: relative;
+        margin-left: 80vw;
+    }
+
+    /* Style voor de balkjes van het hamburger menu */
+    .hamburger-menu span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: white; /* Kleur van de balkjes */
+        transition: 0.3s ease-in-out;
+        border-radius: 5px;
+    }
+
+    /* Transformeer naar een kruisje wanneer de checkbox is aangevinkt */
+    #menuToggle:checked + label #bar1 {
+        transform: rotate(45deg);
+        position: relative;
+        top: 8px;
+    }
+
+    #menuToggle:checked + label #bar2 {
+        opacity: 0; /* Verberg het middelste balkje */
+    }
+
+    #menuToggle:checked + label #bar3 {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -8px;
+    }
+
+    /* Verberg het hamburger navigatiemenu standaard */
+    #hamburgerMenuButtonNav {
+        display: none;
+    }
+
+    /* Wanneer de checkbox is aangevinkt, toon het hamburger menu */
+    #menuToggle:checked + label + #hamburgerMenuButtonNav {
+        display: block;
+        position: absolute;
+        top: 16vh;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    /* Stijl voor de links in het hamburger menu */
+    #hamburgerMenuButtonNav a {
+        display: block;
+        padding: 15px;
+        color: white;
+        text-decoration: none;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    }
+
+    #hamburgerMenuButtonNav a:hover {
+        background-color: grey;
+    }
+
+    /* Verberg de checkbox */
+    #menuToggle {
+        display: none;
+    }
+
+    .product {
+        width: 30vw;
+    }
+
+    .producten .product img {
+        width: 20vw;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    [alt="OP=OP!.png"] {
+        width: 22vw;
+    }
+}
+
+
+/* Standaard zorgt ervoor dat het hamburger menu en de checkbox niet zichtbaar zijn */
+#hamburgerMenuButtonNav, #menuToggle {
+    display: none;
 }
 
 input, textarea {
@@ -240,7 +359,9 @@ input:focus-visible, textarea:focus-visible {
 
 .shoppingCartImage {
     /*code applied to the image of the shoppingcart*/
-    height: 35px;
+    height: 4vh;
+    width: 2.5vw;
+    min-width: 3rem;
     margin-left: 0;
     background-color: lightblue;
     padding: 3px 10px 3px 3px;
@@ -257,6 +378,8 @@ input:focus-visible, textarea:focus-visible {
 .myAccountImg {
     transition: transform 0.8s ease, content 0.8s ease;
     /* Voegt een vloeiende overgang toe */
+    width: 3vw;
+    min-width: 3rem;
 }
 
 .myAccountLink:hover .myAccountImg {
@@ -301,12 +424,13 @@ footer {
 
 footer h4 {
     color: var(--pietFiets_Wit);
+    text-align: justify;
 }
 
 .footerLogo {
     max-width: 16em;
     min-width: 13em;
-    margin: 0 15rem;
+    margin: 1rem 15rem;
     border-radius: 50px;
 }
 
@@ -318,7 +442,26 @@ footer h4 {
 .creditText {
     color: #fff;
     text-align: center;
-    margin: auto;
+    margin: auto auto 1rem auto;
+}
+
+@media only screen and (max-width: 1030px) {
+    footer p, footer a, footer p h4  {
+        font-size: small;
+    }
+
+    footer a {
+        max-width: fit-content;
+        margin: 0;
+    }
+    
+    .footerLogo {
+        margin: auto;
+    }
+}
+
+.bedrijfsInfo {
+    padding: 2%;
 }
 
 /* ---- */
