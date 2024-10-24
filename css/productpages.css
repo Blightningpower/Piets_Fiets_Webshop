@@ -22,7 +22,7 @@ hr {
 }
 
 .product-image img {
-    width: 300px;
+    width: 20vw;
     height: auto;
     border: 1px solid #ddd;
     padding: 10px;

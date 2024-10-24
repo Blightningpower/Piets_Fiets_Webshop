@@ -24,41 +24,59 @@
 
 <body>
 
-  <!--This code is for the header-->
-  <div class="fullHeader">
-    <header>
+ <!--This code is for the header-->
+ <div class="fullHeader">
+  <header>
 
-      <a href="../index.html"><img id="logo" src="../img/Piets_Fiets_Webshop Logo.png"
-          alt="Piets_Fiets_Webshop Logo.png"></a>
+    <a href="../index.html"><img id="logo" src="../img/Piets_Fiets_Webshop Logo.png" alt="Piets_Fiets_Webshop Logo.png"></a>
 
-      <div class="search-box">
-        <input type="text" id="search-input" placeholder="Zoeken.." />
-      </div>
 
-      <div class="shoppingCart">
-        <a href="../html/shoppingCart.html" class="shoppingCartLink"><img class="shoppingCartImage" src="../img/Shoppingcart.png"
-            alt="Shoppingcart.png">
-      </div>
-
-      <div class="myAccount">
-        <a href="../html/logIn.html" class="myAccountLink"><img class="myAccountImg" src="../img/User icon.png"
-            alt="User icon.png">
-      </div>
-
-    </header>
-    <div class="secondHeader">
-
-      <div id="menuButtonNav">
-        <a class="menuButton" href="../index.html">Home</a>
-        <a class="menuButton" href="../html/fietsen.html">Fietsen</a>
-        <a class="menuButton" href="../html/fietskleding.html">Fietskleding</a>
-        <a class="menuButton" href="../html/accessoires.html">Accessoires</a>
-        <a class="menuButton" href="../html/contact.html">Contact</a>
-      </div>
-
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Zoeken.." />
     </div>
+
+    <div class="shoppingCart">
+      <a href="../html/shoppingCart.html" class="shoppingCartLink"><img class="shoppingCartImage" src="../img/Shoppingcart.png"
+          alt="Shoppingcart.png">
+    </div>
+
+    <div class="myAccount">
+      <a href="../html/logIn.html" class="myAccountLink"><img class="myAccountImg" src="../img/User icon.png"
+          alt="User icon.png">
+    </div>
+
+  </header>
+  <div class="secondHeader">
+
+    <div id="menuButtonNav">
+      <a class="menuButton" href="../index.html">Home</a>
+      <a class="menuButton" href="../html/fietsen.html">Fietsen</a>
+      <a class="menuButton" href="../html/fietskleding.html">Fietskleding</a>
+      <a class="menuButton" href="../html/accessoires.html">Accessoires</a>
+      <a class="menuButton" href="../html/contact.html">Contact</a>
+    </div>
+
+    <div class="hamburgerSearch-box">
+      <input type="text" id="hamburgerSearch-input" placeholder="Zoeken.." />
+    </div>
+
+    <input type="checkbox" id="menuToggle">
+    <label for="menuToggle" class="hamburger-menu">
+      <span id="bar1"></span>
+      <span id="bar2"></span>
+      <span id="bar3"></span>
+    </label>
+
+    <div id="hamburgerMenuButtonNav">
+      <a class="hamburgerMenuButton" href="../index.html">Home</a>
+      <a class="hamburgerMenuButton" href="../html/fietsen.html">Fietsen</a>
+      <a class="hamburgerMenuButton" href="../html/fietskleding.html">Fietskleding</a>
+      <a class="hamburgerMenuButton" href="../html/accessoires.html">Accessoires</a>
+      <a class="hamburgerMenuButton" href="../html/contact.html">Contact</a>
+    </div>
+
   </div>
-  <!-- --- -->
+</div>
 
   <main>
     <section class="horizontalFlex">
@@ -78,6 +96,7 @@
           op om het retourproces af te handelen. Voor meer informatie over ons retourbeleid, bekijk ons retourbeleid.
         </p>
       </div>
+
       <form class="contactForm">
         <div class="contactBar">
           <label>Naam:</label>
@@ -105,6 +124,24 @@
         <br><br>
         <button class="contactSubmit" type="submit" class="btn">Verstuur</button>
       </form>
+
+      <div class="miniContactText">
+        <h2>Contact</h2>
+        <p>Adres: Fietsenstraat 12, 1234 AB Amsterdam</p>
+        <p>Telefoon: +31 20 123 4567</p>
+        <p>Email: info@pietsfiets.nl</p>
+        <h5>Retourinformatie:</h5>
+        <p class="miniRetourText">
+          Heb je een bestelling geplaatst en wil je deze retourneren?
+          <br><br>
+          Vul dan het contactformulier hiernaast in met als
+          onderwerp 'Retour' en geef je bestelnummer en reden van retour op. 
+          <br><br>
+          Wij nemen zo snel mogelijk contact met je
+          op om het retourproces af te handelen. Voor meer informatie over ons retourbeleid, bekijk ons retourbeleid.
+        </p>
+      </div>
+      
     </section>
   </main>
 
