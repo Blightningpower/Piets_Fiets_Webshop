@@ -18,16 +18,19 @@
 
 html {
     min-height: 100%;
+    min-width: -webkit-fill-available;
 }
 
 body {
     /*code applied to the whole body of the page*/
     background-color: var(--pietFiets_Wit);
     margin: 0;
+    min-width: -webkit-fill-available;
 }
 
 main {
     min-height: 100vh;
+    min-width: -webkit-fill-available;
     padding-top: 15rem;
     display: flex;
     align-items: center;
@@ -65,7 +68,7 @@ h5 {
     max-width: fit-content;
 }
 
-h1 {
+h1, .loginTitle {
     margin: 2% auto;
 }
 
@@ -81,6 +84,7 @@ h5 {
     left: 0;
     right: 0;
     z-index: 1000;
+    min-width: -webkit-fill-available;
 }
 
 header {
@@ -93,6 +97,7 @@ header {
     justify-content: flex-start;
     padding: 10px 3rem;
     margin: unset;
+    min-width: -webkit-fill-available;
 }
 
 .secondHeader {
@@ -120,6 +125,7 @@ main .promo {
     padding: 5%;
     text-align: center;
     min-height: 6rem;
+    min-width: -webkit-fill-available;
     display: flex;
 }
 
@@ -447,6 +453,7 @@ textarea:focus-visible {
 
 .noAllign {
     align-items: flex-start;
+    min-width: -webkit-fill-available;
 }
 
 /*This code is for the footer*/
