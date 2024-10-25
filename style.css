@@ -29,6 +29,9 @@ body {
 main {
     min-height: 100vh;
     padding-top: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 img {
@@ -311,6 +314,8 @@ main .promo p {
         text-decoration: none;
         border-top: 1px solid #fff;
         border-bottom: 1px solid #fff;
+        width: -webkit-fill-available;
+        margin-right: 2vw;
     }
 
     #hamburgerMenuButtonNav a:hover {
@@ -586,7 +591,7 @@ form label {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: auto 0 auto 15vw;
+    margin: auto 0 auto 3vw;
 }
 
 .contactText p {
@@ -823,7 +828,13 @@ form label {
 
     .centerOrederTable h2 {
         font-size: 4vw;
+    }    
+    
+    #menuToggle:checked+label+#hamburgerMenuButtonNav {
+        top: 100%;
     }
+
+
 }
 
 @media only screen and (min-width: 820px) and (max-width: 1300px) {
