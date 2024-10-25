@@ -802,7 +802,7 @@ form label {
     /* Wijzig de tekst in het span-element binnen de th */
     .order-table th:nth-child(2) span::before {
         content: "Prdctbeschr."; /* Verander de tekst */
-        padding: 0 10px;
+        padding-left: 4px;
     }
     
     /* Verberg de originele tekst */
