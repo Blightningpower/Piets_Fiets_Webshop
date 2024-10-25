@@ -54,11 +54,16 @@ hr {
 /* Voor WebKit-browsers (Chrome, Safari) */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-    margin: 0; /* Geen marges om maximale ruimte te benutten */
-    -webkit-appearance: auto; /* Gebruik de standaard spinnerstijl */
-    appearance: auto; /* Gebruik de standaard spinnerstijl */
-    width: auto; /* Laat de browser de juiste breedte bepalen */
-    height: auto; /* Laat de browser de juiste hoogte bepalen */
+    margin: 0;
+    /* Geen marges om maximale ruimte te benutten */
+    -webkit-appearance: auto;
+    /* Gebruik de standaard spinnerstijl */
+    appearance: auto;
+    /* Gebruik de standaard spinnerstijl */
+    width: auto;
+    /* Laat de browser de juiste breedte bepalen */
+    height: auto;
+    /* Laat de browser de juiste hoogte bepalen */
 }
 
 .product-actions {
@@ -85,4 +90,23 @@ input[type="number"]::-webkit-outer-spin-button {
     display: flex;
     align-items: center;
     margin: auto 0;
+}
+
+@media only screen and (max-width: 500px) {
+    .btn {
+        font-size: x-small;
+    }
+
+    .product-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-price span {
+        font-size: 4vw;
+    }
+
+    .quantity-selector {
+        padding: 3px !important;
+    }
 }
