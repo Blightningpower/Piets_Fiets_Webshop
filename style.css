@@ -68,7 +68,8 @@ h5 {
     max-width: fit-content;
 }
 
-h1, .loginTitle {
+h1,
+.loginTitle {
     margin: 2% auto;
 }
 
@@ -118,6 +119,38 @@ header {
     /*code applied to headerlogo*/
     max-height: 5rem;
     border-radius: 25px;
+}
+
+.headerIcons {
+    display: flex;
+    align-items: baseline;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #000;
+    border: 1px solid white;
+    position: absolute;
+    padding: 0 1vw;
+    margin-left: 3vw;
+}
+
+.hamburgerDropdown-content {
+    display: none;
+    background-color: #000;
+}
+
+.hamburgerCatalouges:hover~.hamburgerDropdown-content,
+.hamburgerCatalouges:focus~.hamburgerDropdown-content {
+    display: block;
+}
+
+.catalouges:hover~.dropdown-content,
+.catalouges:focus~.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border-radius: 5px;
 }
 
 main .promo {
@@ -256,7 +289,7 @@ main .promo p {
     }
 
     #logo {
-        margin-right: 20vw;
+        margin-right: 30vw;
     }
 
     /* Verberg het standaard menu */
@@ -356,6 +389,12 @@ main .promo p {
     }
 }
 
+@media only screen and (min-width: 600px) and (max-width: 700px) {
+    .headerIcons {
+        margin-left: 15vw;
+    }
+}
+
 
 /* Standaard zorgt ervoor dat het hamburger menu en de checkbox niet zichtbaar zijn */
 #hamburgerMenuButtonNav,
@@ -388,7 +427,7 @@ textarea:focus-visible {
     background-color: var(--button-color);
     display: inline-block;
     text-transform: uppercase;
-    padding: 0.8%;
+    padding: 15px;
     border-radius: 6px;
     cursor: pointer;
     transition: all ease-in-out 300ms;
@@ -826,22 +865,31 @@ form label {
 }
 
 @media only screen and (max-width: 500px) {
-    /* Wijzig de tekst in het span-element binnen de th */
-    .order-table th:nth-child(2) span::before {
-        content: "Prdctbeschr."; /* Verander de tekst */
-        padding-left: 4px;
-    }
-    
-    /* Verberg de originele tekst */
-    .order-table th:nth-child(2) span {
-        visibility: hidden; /* Zorg ervoor dat de originele tekst onzichtbaar is */
-    }
-    
-    .order-table th:nth-child(2) span::before {
-        visibility: visible; /* Toon de nieuwe tekst */
+
+    .headerIcons {
+        margin-left: 0;
     }
 
-    .order-table th, .order-table td {
+    /* Wijzig de tekst in het span-element binnen de th */
+    .order-table th:nth-child(2) span::before {
+        content: "Prdctbeschr.";
+        /* Verander de tekst */
+        padding-left: 4px;
+    }
+
+    /* Verberg de originele tekst */
+    .order-table th:nth-child(2) span {
+        visibility: hidden;
+        /* Zorg ervoor dat de originele tekst onzichtbaar is */
+    }
+
+    .order-table th:nth-child(2) span::before {
+        visibility: visible;
+        /* Toon de nieuwe tekst */
+    }
+
+    .order-table th,
+    .order-table td {
         max-width: 77.8px;
         font-size: 13px;
         padding: 10px;
@@ -850,8 +898,8 @@ form label {
     .centerOrederTable h2 {
         font-size: 4vw;
         padding-left: 3%;
-    }    
-    
+    }
+
     #menuToggle:checked+label+#hamburgerMenuButtonNav {
         top: 100%;
     }
