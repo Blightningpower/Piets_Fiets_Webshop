@@ -22,7 +22,7 @@ html {
 
 body {
     /*code applied to the whole body of the page*/
-    background-color: #fff;
+    background-color: var(--pietFiets_Wit);
     margin: 0;
 }
 
@@ -30,8 +30,8 @@ main {
     min-height: 100vh;
     padding-top: 15rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
 }
 
 img {
@@ -62,6 +62,11 @@ h5 {
     color: #000;
     max-height: fit-content;
     text-align: center;
+    max-width: fit-content;
+}
+
+h1 {
+    margin: 2% auto;
 }
 
 h5 {
@@ -99,6 +104,9 @@ header {
     flex-direction: row;
     justify-content: center;
     padding: 10px 3rem;
+    top: 104px;
+    position: absolute;
+    min-width: -webkit-fill-available;
 }
 
 #logo {
@@ -224,7 +232,7 @@ main .promo p {
     .hamburgerSearch-box {
         position: relative;
         width: 200px;
-        margin: auto;
+        margin: 0;
     }
 
     .hamburgerSearch-box input {
@@ -256,7 +264,7 @@ main .promo p {
         cursor: pointer;
         z-index: 1000;
         position: relative;
-        margin-left: 50vw;
+        margin-left: 20vw;
     }
 
     /* Style voor de balkjes van het hamburger menu */
@@ -298,7 +306,7 @@ main .promo p {
     #menuToggle:checked+label+#hamburgerMenuButtonNav {
         display: block;
         position: absolute;
-        top: 17vh;
+        top: 50px;
         left: 0;
         width: 100%;
         background-color: black;
@@ -437,6 +445,10 @@ textarea:focus-visible {
     align-items: center;
 }
 
+.noAllign {
+    align-items: flex-start;
+}
+
 /*This code is for the footer*/
 
 footer {
@@ -497,7 +509,7 @@ footer h4 {
     }
 
     .footerLogo {
-        margin: auto;
+        margin: 5% auto;
         width: 25vw;
     }
 }
@@ -646,9 +658,7 @@ form label {
 
 /* Specifieke styling voor de winkelmand overzicht */
 .winkelmand-overzicht {
-    background-color: #f8f8f8;
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .winkelmand-overzicht button {
@@ -668,7 +678,7 @@ form label {
     /* Grotere breedte van het invoerveld */
     height: 20px;
     /* Grotere hoogte van het invoerveld */
-    padding: 10px;
+    /* padding: 10px; */
     /* Meer ruimte binnenin het invoerveld */
     margin: auto;
 }
@@ -688,7 +698,8 @@ form label {
 
 .checkout-summary {
     max-width: fit-content;
-    margin-left: 70vw;
+    margin-right: 4vw;
+    float: inline-end;
 }
 
 /* Log in Pagina */
@@ -731,7 +742,7 @@ form label {
 .order-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .order-table th,
@@ -741,6 +752,7 @@ form label {
     border: 1px solid #ddd;
     border-bottom: 2px solid #ddd;
     font-size: 1rem;
+    min-width: 10vw;
 }
 
 .order-table thead {
@@ -776,7 +788,9 @@ form label {
     width: fit-content;
     min-width: 10%;
     min-height: 100ch;
-    padding: 0 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .centerOrederTable h2 {
@@ -821,17 +835,27 @@ form label {
     }
 
     .order-table th, .order-table td {
-        max-width: 1rem;
-        font-size: small;
-        padding: unset;
+        max-width: 77.8px;
+        font-size: 13px;
+        padding: 10px;
     }
 
     .centerOrederTable h2 {
         font-size: 4vw;
+        padding-left: 3%;
     }    
     
     #menuToggle:checked+label+#hamburgerMenuButtonNav {
         top: 100%;
+    }
+
+    .order-iframe {
+        margin: 0;
+        padding: unset;
+    }
+
+    main {
+        align-items: stretch;
     }
 
 }
