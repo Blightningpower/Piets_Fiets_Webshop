@@ -287,7 +287,7 @@ main .promo p {
     }
 
     #logo {
-        margin-right: 30vw;
+        margin-right: 18vw;
     }
 
     /* Verberg het standaard menu */
@@ -862,6 +862,22 @@ form label {
     }
 }
 
+@media only screen and (max-width: 390px) {
+    .order-table th,
+    .order-table td {
+        max-width: 56.8px;
+    }
+}
+
+@media only screen and (min-width: 391px) and (max-width: 620px) {
+    .order-table th,
+    .order-table td {
+        max-width: 77.8px;
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+
 @media only screen and (max-width: 500px) {
 
     .headerIcons {
@@ -891,13 +907,6 @@ form label {
     .order-table th:nth-child(2) span::before {
         visibility: visible;
         /* Toon de nieuwe tekst */
-    }
-
-    .order-table th,
-    .order-table td {
-        max-width: 77.8px;
-        font-size: 13px;
-        padding: 10px;
     }
 
     .centerOrederTable h2 {
