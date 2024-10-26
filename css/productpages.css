@@ -48,7 +48,7 @@ hr {
 .product-price {
     font-size: 1.8rem;
     color: #007bff;
-    margin: 20px;
+    margin: 20px 20px 20px 0;
 }
 
 /* Voor WebKit-browsers (Chrome, Safari) */
@@ -107,6 +107,10 @@ input[type="number"]::-webkit-outer-spin-button {
         padding: 3px !important;
     }
 
+    .btn {
+        margin: 0 !important;
+    }
+
 }
 
 @media only screen and (max-width: 700px) {
@@ -119,7 +123,6 @@ input[type="number"]::-webkit-outer-spin-button {
     .btn {
         font-size: x-small;
         min-width: 120px;
-        max-width: 120px;
+        max-width: 120px !important;
     }
-
 }

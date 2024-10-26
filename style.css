@@ -226,7 +226,7 @@ main .promo p {
     margin: 1rem;
 }
 
-.btn:hover {
+.btn:hover, .catalougeBtn:hover {
     background-color: var(--link-Hover-color);
     box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
     transform: scale(1.2);
