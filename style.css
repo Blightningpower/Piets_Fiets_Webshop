@@ -16,22 +16,19 @@
     scroll-behavior: smooth;
 }
 
-html {
-    min-height: 100%;
-    min-width: -webkit-fill-available;
-}
-
-body {
-    /*code applied to the whole body of the page*/
+html, body {
+    height: auto;
+    overflow-y: auto;
     background-color: var(--pietFiets_Wit);
     margin: 0;
-    min-width: -webkit-fill-available;
+    min-height: 100%;
+    min-width: 100%;
 }
 
 main {
-    min-height: 100vh;
+    min-height: auto;
     min-width: -webkit-fill-available;
-    padding-top: 15rem;
+    padding: 15rem 0;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -207,6 +204,7 @@ main .promo p {
     color: white;
     padding: 10px;
     text-decoration: none;
+    text-align: center;
     display: inline-block;
     border-radius: .375rem;
     max-width: fit-content;
@@ -869,6 +867,13 @@ form label {
     .headerIcons {
         margin-left: 0;
     }
+}
+
+@media only screen and (max-width: 620px) {
+
+    .winkelmand-overzicht {
+        padding: 0 2%;
+    }
 
     /* Wijzig de tekst in het span-element binnen de th */
     .order-table th:nth-child(2) span::before {
@@ -912,7 +917,6 @@ form label {
     main {
         align-items: stretch;
     }
-
 }
 
 @media only screen and (min-width: 820px) and (max-width: 1300px) {
