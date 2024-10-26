@@ -123,32 +123,46 @@ header {
     align-items: baseline;
 }
 
-.dropdown-content {
+/* Verberg de checkboxes */
+#cataloguesToggleDesktop,
+#cataloguesToggleMobile {
     display: none;
-    background-color: #000;
-    border: 1px solid white;
-    position: absolute;
-    padding: 0 1vw;
-    margin-left: 3vw;
 }
 
+/* Standaard dropdowns verbergen */
+.dropdown-content,
 .hamburgerDropdown-content {
     display: none;
     background-color: #000;
+    padding: 0 1vw;
 }
 
-.hamburgerCatalouges:hover~.hamburgerDropdown-content,
-.hamburgerCatalouges:focus~.hamburgerDropdown-content {
-    display: block;
+.dropdown-content {
+    position: absolute;
+    margin-left: 3vw;
+    border: 1px solid white;
 }
 
-.catalouges:hover~.dropdown-content,
-.catalouges:focus~.dropdown-content {
+.hamburgerDropdown-content {
+    position: relative;
+}
+
+/* Desktop dropdown tonen wanneer de checkbox is geselecteerd */
+#cataloguesToggleDesktop:checked + label + .dropdown-content {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     border-radius: 5px;
 }
+
+/* Mobiele dropdown tonen wanneer de checkbox is geselecteerd */
+#cataloguesToggleMobile:checked + label + .hamburgerDropdown-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border-radius: 5px;
+}
+
 
 main .promo {
     background: var(--pietsFiets_Blauw);
@@ -352,7 +366,7 @@ main .promo p {
     }
 
     /* Stijl voor de links in het hamburger menu */
-    #hamburgerMenuButtonNav a {
+    #hamburgerMenuButtonNav a, #hamburgerMenuButtonNav label {
         display: block;
         padding: 15px;
         color: white;
@@ -591,6 +605,7 @@ form button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 2vh;
 }
 
 form button:hover {
@@ -680,6 +695,8 @@ form label {
     .contactForm {
         margin: auto;
         width: 25rem;
+        padding: unset;
+        transform: scale(0.8);
     }
 }
 
@@ -787,6 +804,7 @@ form label {
     width: 100%;
     border-collapse: collapse;
     margin: 0;
+    max-width: min-content;
 }
 
 .order-table th,
@@ -796,7 +814,7 @@ form label {
     border: 1px solid #ddd;
     border-bottom: 2px solid #ddd;
     font-size: 1rem;
-    min-width: 10vw;
+    min-width: 15vw;
 }
 
 .order-table thead {
@@ -813,7 +831,7 @@ form label {
 }
 
 .order-table th {
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     border: 1px solid #ddd;
 }
@@ -862,19 +880,27 @@ form label {
     }
 }
 
-@media only screen and (max-width: 390px) {
-    .order-table th,
-    .order-table td {
-        max-width: 56.8px;
-    }
-}
+@media only screen and (max-width: 394px) {
+        .order-table th, .order-table td {
+            max-width: 56.8px;
+            padding: 8px;
+            font-size: 10px;
+            font-weight: 600;
+        }
 
-@media only screen and (min-width: 391px) and (max-width: 620px) {
+        .order-table th {
+            font-size: 12px;
+        }
+    }
+
+@media only screen and (min-width: 394px) and (max-width: 620px) {
     .order-table th,
     .order-table td {
         max-width: 77.8px;
-        font-size: 13px;
-        padding: 10px;
+        font-size: 11px;
+        /* padding: 10px 11px 10px 10px; */
+        max-height: 100px;
+        padding: 1px 2px;
     }
 }
 
@@ -893,7 +919,7 @@ form label {
 
     /* Wijzig de tekst in het span-element binnen de th */
     .order-table th:nth-child(2) span::before {
-        content: "Prdctbeschr.";
+        content: "Prd.beschr.";
         /* Verander de tekst */
         padding-left: 4px;
     }

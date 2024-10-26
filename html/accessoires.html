@@ -3,33 +3,34 @@
 
 <head>
 
-    <!--links for the Favicons-->
-    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon_io/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="../img/favicon_io/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="../img/favicon_io/android-chrome-512x512.png">
+  <!--links for the Favicons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon_io/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../img/favicon_io/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../img/favicon_io/android-chrome-512x512.png">
 
-    <!--metatags for responsiveness-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="HandheldFriendly" content="true">
+  <!--metatags for responsiveness-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
 
-    <title>Accessoires</title>
+  <title>Accessoires</title>
 
-    <!--links for stylesheets-->
-    <link rel="stylesheet" href="../css/catalouges.css">
-    <link rel="stylesheet" href="../style.css">
-    
+  <!--links for stylesheets-->
+  <link rel="stylesheet" href="../css/catalouges.css">
+  <link rel="stylesheet" href="../style.css">
+
 </head>
 
 <body>
 
-     <!--This code is for the header-->
+  <!--This code is for the header-->
   <div class="fullHeader">
     <header>
 
-      <a href="../index.html"><img id="logo" src="../img/Piets_Fiets_Webshop Logo.png" alt="Piets_Fiets_Webshop Logo.png"></a>
+      <a href="../index.html"><img id="logo" src="../img/Piets_Fiets_Webshop Logo.png"
+          alt="Piets_Fiets_Webshop Logo.png"></a>
 
 
       <div class="search-box">
@@ -38,10 +39,10 @@
 
       <div class="headerIcons">
         <div class="shoppingCart">
-          <a href="../html/shoppingCart.html" class="shoppingCartLink"><img class="shoppingCartImage" src="../img/Shoppingcart.png"
-              alt="Shoppingcart.png">
+          <a href="../html/shoppingCart.html" class="shoppingCartLink"><img class="shoppingCartImage"
+              src="../img/Shoppingcart.png" alt="Shoppingcart.png">
         </div>
-  
+
         <div class="myAccount">
           <a href="../html/logIn.html" class="../myAccountLink"><img class="myAccountImg" src="../img/User icon.png"
               alt="User icon.png">
@@ -54,12 +55,14 @@
       <div id="menuButtonNav">
         <a class="menuButton" href="../index.html">Home</a>
 
-        <a class="menuButton catalouges" href="#">Catalogues</a>
-    <div class="dropdown-content">
-        <a class="menuButton" href="../html/fietsen.html">Fietsen</a>
-        <a class="menuButton" href="../html/fietskleding.html">Fietskleding</a>
-        <a class="menuButton" href="../html/accessoires.html">Accessoires</a>
-    </div>
+        <!-- Desktop Dropdown -->
+        <input type="checkbox" id="cataloguesToggleDesktop">
+        <label for="cataloguesToggleDesktop" class="menuButton catalouges">Catalogues</label>
+        <div class="dropdown-content">
+          <a class="menuButton" href="../html/fietsen.html">Fietsen</a>
+          <a class="menuButton" href="../html/fietskleding.html">Fietskleding</a>
+          <a class="menuButton" href="../html/accessoires.html">Accessoires</a>
+        </div>
 
         <a class="menuButton" href="../html/contact.html">Contact</a>
       </div>
@@ -78,12 +81,14 @@
       <div id="hamburgerMenuButtonNav">
         <a class="hamburgerMenuButton" href="../index.html">Home</a>
 
-        <a class="hamburgerMenuButton hamburgerCatalouges" href="#">Catalogues</a>
-    <div class="hamburgerDropdown-content">
-        <a class="hamburgerMenuButton" href="../html/fietsen.html">Fietsen</a>
-        <a class="hamburgerMenuButton" href="../html/fietskleding.html">Fietskleding</a>
-        <a class="hamburgerMenuButton" href="../html/accessoires.html">Accessoires</a>
-    </div>
+        <!-- Mobile Dropdown -->
+        <input type="checkbox" id="cataloguesToggleMobile">
+        <label for="cataloguesToggleMobile" class="hamburgerMenuButton hamburgerCatalouges">Catalogues</label>
+        <div class="hamburgerDropdown-content">
+          <a class="hamburgerMenuButton" href="../html/fietsen.html">Fietsen</a>
+          <a class="hamburgerMenuButton" href="../html/fietskleding.html">Fietskleding</a>
+          <a class="hamburgerMenuButton" href="../html/accessoires.html">Accessoires</a>
+        </div>
 
         <a class="hamburgerMenuButton" href="../html/contact.html">Contact</a>
       </div>
@@ -91,114 +96,115 @@
     </div>
   </div>
 
-<!-- This is the main code -->
-    <main>
-        <section class="product-page">
-            <h1>Accessoires</h1>
-    
-            <div class="sort-options">
-                <label for="sort">Sorteer op:</label>
-                <select id="sort">
-                    <option value="color">Kleur</option>
-                    <option value="low-high">Prijs Laag > Hoog</option>
-                    <option value="high-low">Prijs Hoog > Laag</option>
-                </select>
-            </div>
-    
-            <div class="product-grid">
-                <div class="product-item">
-                    <img src="../img/Accessoires_Klok.png" alt="Accessoires_Klok.png" class="productImage">
-                    <h2>Fietsklok</h2>
-                    <p>€69,99</p>
-                    <a href="#" class="catalougeBtn">Bekijk Informatie</a>
-                    <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
-                </div>
-                <div class="product-item">
-                    <img src="../img/Accessoires_Horloge.png" alt="Accessoires_Horloge.png" class="productImage">
-                    <h2>Sporthorloge</h2>
-                    <p>€99,99</p>
-                    <a href="productPageWatch.html" class="catalougeBtn" title="Hier kun je klikken!">Bekijk Informatie</a>
-                    <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
-                </div>
-                <div class="product-item">
-                    <img src="../img/Accessoires_Nekwarmer.png" alt="Accessoires_Nekwarmer.png" class="productImage">
-                    <h2>Nekwarmer</h2>
-                    <p>€19,99</p>
-                    <a href="#" class="catalougeBtn">Bekijk Informatie</a>
-                    <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
-                </div>
-                <div class="product-item">
-                    <img src="../img/Accessoires_Armband.png" alt="Accessoires_Armband.png" class="productImage">
-                    <h2>Reflecterende Armband</h2>
-                    <p>€12,49</p>
-                    <a href="#" class="catalougeBtn">Bekijk Informatie</a>
-                    <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
-                </div>
-                <div class="product-item">
-                    <img src="../img/Accessoires_Helm.png" alt="Accessoires_Helm.png" class="productImage">
-                    <h2>Fietshelm</h2>
-                    <p>€59,99</p>
-                    <a href="#" class="catalougeBtn">Bekijk Informatie</a>
-                    <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
-                </div>
-                <div class="product-item">
-                    <img src="../img/Accessoires_Tas.png" alt="Accessoires_Tas.png" class="productImage">
-                    <h2>Fietstas</h2>
-                    <p>€14,50</p>
-                    <a href="#" class="catalougeBtn">Bekijk Informatie</a>
-                    <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
-                </div>
-                <div class="product-item">
-                    <img src="../img/Accessoires_Telefoonhouder.png" alt="Accessoires_Telefoonhouder.png" class="productImage">
-                    <h2>Telefoonhouder</h2>
-                    <p>€29,99</p>
-                    <a href="#" class="catalougeBtn">Bekijk Informatie</a>
-                    <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
-                </div>
-                <div class="product-item">
-                    <img src="../img/Accessoires_Fietsslot.png" alt="Accessoires_Fietsslot.png" class="productImage">
-                    <h2>Fietsslot</h2>
-                    <p>€39,99</p>
-                    <a href="#" class="catalougeBtn">Bekijk Informatie</a>
-                    <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
-                </div>
-            </div>
-        </section>
-    </main>
-<!-- --- -->
+  <!-- This is the main code -->
+  <main>
+    <section class="product-page">
+      <h1>Accessoires</h1>
 
-<!-- This is the footer code -->
-    <footer>
+      <div class="sort-options">
+        <label for="sort">Sorteer op:</label>
+        <select id="sort">
+          <option value="color">Kleur</option>
+          <option value="low-high">Prijs Laag > Hoog</option>
+          <option value="high-low">Prijs Hoog > Laag</option>
+        </select>
+      </div>
 
-        <div class="flexFooterItems">
-    
-          <div class="bedrijfsInfo">
-            <h4>Contact</h4>
-            <p>Piets Fiets</p>
-            <p>Fietsenstraat 12</p>
-            <p>1234 AB Amsterdam, Nederland</p>
-            <br>
-            <a href="#">+31 20 123 4567</a>
-            <br><br>
-            <a href="#">info@pietsfiets.nl</a>
-          </div>
-    
-          <a href="../index.html"><img src="../img/Piets_Fiets_Webshop Logo.png" alt="Piets_Fiets_Webshop Logo.png" class="footerLogo"></a>
-    
-          <div class="socials">
-            <a href="#"><img src="../img/facebook_icon.png" alt="facebook_icon.png" class="socialIcon"></a>
-            <a href="#"><img src="../img/instagram_icon.png" alt="instagram_icon.png" class="socialIcon"></a>
-            <a href="#"><img src="../img/whatsapp_icon.png" alt="whatsapp_icon.png" class="socialIcon"></a>
-            <a href="#"><img src="../img/youtube_icon.png" alt="youtube_icon.png" class="socialIcon"></a>
-          </div>
-    
+      <div class="product-grid">
+        <div class="product-item">
+          <img src="../img/Accessoires_Klok.png" alt="Accessoires_Klok.png" class="productImage">
+          <h2>Fietsklok</h2>
+          <p>€69,99</p>
+          <a href="#" class="catalougeBtn">Bekijk Informatie</a>
+          <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
         </div>
-    
-        <p class="creditText">&copy; 2024 Piets Fiets - <a href="#">Privacybeleid</a> | <a href="#">Algemene Voorwaarden</a>
-        </p>
-    
-      </footer>
-<!-- --- -->
+        <div class="product-item">
+          <img src="../img/Accessoires_Horloge.png" alt="Accessoires_Horloge.png" class="productImage">
+          <h2>Sporthorloge</h2>
+          <p>€99,99</p>
+          <a href="productPageWatch.html" class="catalougeBtn" title="Hier kun je klikken!">Bekijk Informatie</a>
+          <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
+        </div>
+        <div class="product-item">
+          <img src="../img/Accessoires_Nekwarmer.png" alt="Accessoires_Nekwarmer.png" class="productImage">
+          <h2>Nekwarmer</h2>
+          <p>€19,99</p>
+          <a href="#" class="catalougeBtn">Bekijk Informatie</a>
+          <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
+        </div>
+        <div class="product-item">
+          <img src="../img/Accessoires_Armband.png" alt="Accessoires_Armband.png" class="productImage">
+          <h2>Reflecterende Armband</h2>
+          <p>€12,49</p>
+          <a href="#" class="catalougeBtn">Bekijk Informatie</a>
+          <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
+        </div>
+        <div class="product-item">
+          <img src="../img/Accessoires_Helm.png" alt="Accessoires_Helm.png" class="productImage">
+          <h2>Fietshelm</h2>
+          <p>€59,99</p>
+          <a href="#" class="catalougeBtn">Bekijk Informatie</a>
+          <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
+        </div>
+        <div class="product-item">
+          <img src="../img/Accessoires_Tas.png" alt="Accessoires_Tas.png" class="productImage">
+          <h2>Fietstas</h2>
+          <p>€14,50</p>
+          <a href="#" class="catalougeBtn">Bekijk Informatie</a>
+          <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
+        </div>
+        <div class="product-item">
+          <img src="../img/Accessoires_Telefoonhouder.png" alt="Accessoires_Telefoonhouder.png" class="productImage">
+          <h2>Telefoonhouder</h2>
+          <p>€29,99</p>
+          <a href="#" class="catalougeBtn">Bekijk Informatie</a>
+          <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
+        </div>
+        <div class="product-item">
+          <img src="../img/Accessoires_Fietsslot.png" alt="Accessoires_Fietsslot.png" class="productImage">
+          <h2>Fietsslot</h2>
+          <p>€39,99</p>
+          <a href="#" class="catalougeBtn">Bekijk Informatie</a>
+          <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- --- -->
+
+  <!-- This is the footer code -->
+  <footer>
+
+    <div class="flexFooterItems">
+
+      <div class="bedrijfsInfo">
+        <h4>Contact</h4>
+        <p>Piets Fiets</p>
+        <p>Fietsenstraat 12</p>
+        <p>1234 AB Amsterdam, Nederland</p>
+        <br>
+        <a href="#">+31 20 123 4567</a>
+        <br><br>
+        <a href="#">info@pietsfiets.nl</a>
+      </div>
+
+      <a href="../index.html"><img src="../img/Piets_Fiets_Webshop Logo.png" alt="Piets_Fiets_Webshop Logo.png"
+          class="footerLogo"></a>
+
+      <div class="socials">
+        <a href="#"><img src="../img/facebook_icon.png" alt="facebook_icon.png" class="socialIcon"></a>
+        <a href="#"><img src="../img/instagram_icon.png" alt="instagram_icon.png" class="socialIcon"></a>
+        <a href="#"><img src="../img/whatsapp_icon.png" alt="whatsapp_icon.png" class="socialIcon"></a>
+        <a href="#"><img src="../img/youtube_icon.png" alt="youtube_icon.png" class="socialIcon"></a>
+      </div>
+
+    </div>
+
+    <p class="creditText">&copy; 2024 Piets Fiets - <a href="#">Privacybeleid</a> | <a href="#">Algemene Voorwaarden</a>
+    </p>
+
+  </footer>
+  <!-- --- -->
 
 </body>
 
