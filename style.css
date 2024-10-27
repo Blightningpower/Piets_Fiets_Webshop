@@ -125,6 +125,48 @@ header {
 
 /* Verberg de checkboxes */
 #cataloguesToggleDesktop,
+#fietsenToggleDesktop,
+#kledingToggleDesktop,
+#accessoiresToggleDesktop {
+    display: none;
+}
+
+/* Sub-dropdown styling voor meer producten */
+.sub-dropdown-content {
+    display: none;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+}
+
+/* Toon subdropdown-content als een kolom */
+.sub-dropdown-content a {
+    font-size: 0.8em;
+    color: #ccc;
+    padding: 5px 10px;
+}
+
+.sub-dropdown-content a:hover {
+    color: var(--link-Hover-color);
+}
+
+/* Verdeel producten in meerdere kolommen bij meer dan vier producten */
+.sub-dropdown-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+#fietsenToggleDesktop:checked + label + .sub-dropdown-content,
+#kledingToggleDesktop:checked + label + .sub-dropdown-content,
+#accessoiresToggleDesktop:checked + label + .sub-dropdown-content {
+    display: grid;
+}
+
+
+/* Verberg de checkboxes */
+#cataloguesToggleDesktop,
 #cataloguesToggleMobile {
     display: none;
 }
@@ -141,6 +183,7 @@ header {
     position: absolute;
     margin-left: 3vw;
     border: 1px solid white;
+    padding: 1%;
 }
 
 .hamburgerDropdown-content {
@@ -161,6 +204,84 @@ header {
     flex-direction: column;
     flex-wrap: nowrap;
     border-radius: 5px;
+}
+
+/* Verberg de checkboxes voor de mobiele versie */
+#cataloguesToggleMobile,
+#fietsenToggleMobile,
+#kledingToggleMobile,
+#accessoiresToggleMobile {
+    display: none;
+}
+
+/* Standaard verbergen van de mobiele dropdown en sub-dropdowns */
+.mobile-hamburgerDropdown-content,
+.mobile-sub-dropdown-content {
+    display: none;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Toon hoofd-dropdown in het hamburgermenu wanneer de checkbox is geselecteerd */
+#cataloguesToggleMobile:checked + label + .mobile-hamburgerDropdown-content {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+/* Sub-dropdown styling voor mobiel */
+.mobile-sub-dropdown-content a {
+    font-size: 0.8em;
+    color: #ccc;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.mobile-sub-dropdown-content a:hover {
+    color: var(--link-Hover-color);
+}
+
+/* Toon subcategorieën in mobiele dropdown wanneer de checkbox is geselecteerd */
+#fietsenToggleMobile:checked + label + .mobile-sub-dropdown-content,
+#kledingToggleMobile:checked + label + .mobile-sub-dropdown-content,
+#accessoiresToggleMobile:checked + label + .mobile-sub-dropdown-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Styling voor subcategorie labels met pijltje */
+.mobile-subMenuButton {
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #fff;
+    padding: 10px 0;
+    cursor: pointer;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    position: relative;
+    text-align: center;
+}
+
+/* Pijltje rechts (default) */
+.mobile-subMenuButton::after {
+    content: '>';
+    position: absolute;
+    right: 10px;
+    font-size: 1em;
+    color: #fff;
+    transition: transform 0.2s;
+}
+
+/* Verander pijltje naar beneden bij selectie */
+#fietsenToggleMobile:checked + .mobile-subMenuButton::after,
+#kledingToggleMobile:checked + .mobile-subMenuButton::after,
+#accessoiresToggleMobile:checked + .mobile-subMenuButton::after {
+    content: 'v';
 }
 
 
@@ -763,6 +884,104 @@ form label {
     float: inline-end;
 }
 
+/* Aanbevolen producten sectie */
+.recommended-products {
+    margin: 2rem auto;
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--pietFiets_Wit);
+}
+
+.recommended-products h2 {
+    color: var(--pietsFiets-Zwart);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.recommended-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+    align-items: start;
+}
+
+.recommended-grid .product-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    background-color: #f9f9f9;
+    max-width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recommended-grid .product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recommended-grid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.recommended-grid h3 {
+    font-size: 1.2rem;
+    color: var(--pietsFiets-Zwart);
+    margin: 0.5rem 0;
+}
+
+.recommended-grid p {
+    font-size: 1rem;
+    color: var(--pietsFiets-Zwart);
+    margin: 0.5rem 0;
+}
+
+.recommended-grid .catalougeBtn {
+    background-color: var(--pietsFiets_Blauw);
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.recommended-grid .catalougeBtn:hover {
+    background-color: var(--link-Hover-color);
+}
+
+.catalougeBtn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: .375rem;
+    max-width: fit-content;
+    border: none;
+    margin: 2%;
+    max-width: 119px;
+    min-width: 11vw;
+}
+
+.product-grid {
+    display: flex;
+}
+@media only screen and (max-width: 970px) {
+    .product-grid {
+        flex-direction: column;
+    }
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
 /* Log in Pagina */
 
 .logInLogo {
@@ -845,7 +1064,7 @@ form label {
     cursor: pointer;
 }
 
-.centerOrederTable {
+.centerOrderTable {
     margin: 5rem auto;
     width: fit-content;
     min-width: 10%;
@@ -855,7 +1074,7 @@ form label {
     align-items: flex-start;
 }
 
-.centerOrederTable h2 {
+.centerOrderTable h2 {
     max-width: fit-content;
     min-width: 200px;
     display: flex;
@@ -898,9 +1117,16 @@ form label {
     .order-table td {
         max-width: 77.8px;
         font-size: 11px;
-        /* padding: 10px 11px 10px 10px; */
         max-height: 100px;
         padding: 1px 2px;
+        border-collapse: collapse;
+        border: 1px solid black;
+        border-bottom: 2px solid black;
+        border-top: 2px solid black;
+    }
+
+    .rowHover:active {
+        background-color: #f1f1f1;
     }
 }
 
@@ -935,7 +1161,7 @@ form label {
         /* Toon de nieuwe tekst */
     }
 
-    .centerOrederTable h2 {
+    .centerOrderTable h2 {
         font-size: 4vw;
         padding-left: 3%;
     }
@@ -947,6 +1173,9 @@ form label {
     .order-iframe {
         margin: 0;
         padding: unset;
+        border: none;
+        border-bottom: 2px solid black;
+        border-top: 2px solid black;
     }
 
     main {
@@ -956,7 +1185,7 @@ form label {
 
 @media only screen and (min-width: 820px) and (max-width: 1300px) {
 
-    .centerOrederTable h2 {
+    .centerOrderTable h2 {
         font-size: 2.5vw;
     }
 }

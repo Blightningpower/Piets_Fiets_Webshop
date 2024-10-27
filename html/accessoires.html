@@ -56,13 +56,56 @@
         <a class="menuButton" href="../index.html">Home</a>
 
         <!-- Desktop Dropdown -->
-        <input type="checkbox" id="cataloguesToggleDesktop">
-        <label for="cataloguesToggleDesktop" class="menuButton catalouges">Catalogues</label>
-        <div class="dropdown-content">
-          <a class="menuButton" href="../html/fietsen.html">Fietsen</a>
-          <a class="menuButton" href="../html/fietskleding.html">Fietskleding</a>
-          <a class="menuButton" href="../html/accessoires.html">Accessoires</a>
-        </div>
+<input type="checkbox" id="cataloguesToggleDesktop">
+<label for="cataloguesToggleDesktop" class="menuButton catalouges">Catalogues</label>
+<div class="dropdown-content">
+  
+  <!-- Fietsen submenu -->
+  <a class="menuButton" href="../html/fietsen.html">Fietsen</a>
+  <input type="checkbox" id="fietsenToggleDesktop">
+  <label for="fietsenToggleDesktop" class="subMenuButton">Producten</label>
+  <div class="sub-dropdown-content">
+    <a href="../html/fietsen.html#stadsFiets">Stadsfiets</a>
+    <a href="../html/fietsen.html#bmxFiets">BMX Fiets</a>
+    <a href="../html/fietsen.html#klassiekeFiets">Klassieke Fiets</a>
+    <a href="../html/fietsen.html#elektrischeFiets">Elektrische Fiets</a>
+    <a href="../html/fietsen.html#vouwFiets">Vouwfiets</a>
+    <a href="../html/fietsen.html#mountainbike">Mountainbike</a>
+    <a href="../html/fietsen.html#raceFiets">Racefiets</a>
+    <a href="../html/fietsen.html#wegFiets">Wegfiets</a>
+  </div>
+
+  <!-- Fietskleding submenu -->
+  <a class="menuButton" href="../html/fietskleding.html">Fietskleding</a>
+  <input type="checkbox" id="kledingToggleDesktop">
+  <label for="kledingToggleDesktop" class="subMenuButton">Producten</label>
+  <div class="sub-dropdown-content">
+    <a href="../html/fietskleding.html#fietsSchoenen">Fietsschoenen</a>
+    <a href="../html/fietskleding.html#fietsTrui">Fietstrui</a>
+    <a href="../html/fietskleding.html#fietsBroek">Fietsbroek</a>
+    <a href="../html/fietskleding.html#fietsJasEnBroekSet">Fiets Jas en Broek Set</a>
+    <a href="../html/fietskleding.html#fietsMuts">Fietsmuts</a>
+    <a href="../html/fietskleding.html#fietsSokken">Fietssokken</a>
+    <a href="../html/fietskleding.html#fietsPak">Fietspak</a>
+    <a href="../html/fietskleding.html#fietsShirt">Fietsshirt</a>
+  </div>
+
+  <!-- Accessoires submenu -->
+  <a class="menuButton" href="../html/accessoires.html">Accessoires</a>
+  <input type="checkbox" id="accessoiresToggleDesktop">
+  <label for="accessoiresToggleDesktop" class="subMenuButton">Producten</label>
+  <div class="sub-dropdown-content">
+    <a href="../html/accessoires.html#fietsKlok">Fietsklok</a>
+    <a href="../html/accessoires.html#sportHorloge">Sporthorloge</a>
+    <a href="../html/accessoires.html#nekWarmer">Nekwarmer</a>
+    <a href="../html/accessoires.html#reflecterendeArmband">Reflecterende Armband</a>
+    <a href="../html/accessoires.html#fietsHelm">Fietshelm</a>
+    <a href="../html/accessoires.html#fietsTas">Fietstas</a>
+    <a href="../html/accessoires.html#telefoonHouder">Telefoonhouder</a>
+    <a href="../html/accessoires.html#fietsSlot">Fietsslot</a>
+  </div>
+</div>
+
 
         <a class="menuButton" href="../html/contact.html">Contact</a>
       </div>
@@ -82,13 +125,48 @@
         <a class="hamburgerMenuButton" href="../index.html">Home</a>
 
         <!-- Mobile Dropdown -->
-        <input type="checkbox" id="cataloguesToggleMobile">
-        <label for="cataloguesToggleMobile" class="hamburgerMenuButton hamburgerCatalouges">Catalogues</label>
-        <div class="hamburgerDropdown-content">
-          <a class="hamburgerMenuButton" href="../html/fietsen.html">Fietsen</a>
-          <a class="hamburgerMenuButton" href="../html/fietskleding.html">Fietskleding</a>
-          <a class="hamburgerMenuButton" href="../html/accessoires.html">Accessoires</a>
-        </div>
+<input type="checkbox" id="cataloguesToggleMobile">
+<label for="cataloguesToggleMobile" class="mobile-hamburgerMenuButton mobile-hamburgerCatalogues">Catalogues</label>
+<div class="mobile-hamburgerDropdown-content">
+  <input type="checkbox" id="fietsenToggleMobile">
+  <label for="fietsenToggleMobile" class="mobile-subMenuButton">Fietsen</label>
+  <div class="mobile-sub-dropdown-content">
+    <a href="../html/fietsen.html#stadsFiets">Stadsfiets</a>
+    <a href="../html/fietsen.html#bmxFiets">BMX Fiets</a>
+    <a href="../html/fietsen.html#klassiekeFiets">Klassieke Fiets</a>
+    <a href="../html/fietsen.html#elektrischeFiets">Elektrische Fiets</a>
+    <a href="../html/fietsen.html#vouwFiets">Vouwfiets</a>
+    <a href="../html/fietsen.html#mountainbike">Mountainbike</a>
+    <a href="../html/fietsen.html#raceFiets">Racefiets</a>
+    <a href="../html/fietsen.html#wegFiets">Wegfiets</a>
+  </div>
+
+  <input type="checkbox" id="kledingToggleMobile">
+  <label for="kledingToggleMobile" class="mobile-subMenuButton">Fietskleding</label>
+  <div class="mobile-sub-dropdown-content">
+    <a href="../html/fietskleding.html#fietsSchoenen">Fietsschoenen</a>
+    <a href="../html/fietskleding.html#fietsTrui">Fietstrui</a>
+    <a href="../html/fietskleding.html#fietsBroek">Fietsbroek</a>
+    <a href="../html/fietskleding.html#fietsJasEnBroekSet">Fiets Jas en Broek Set</a>
+    <a href="../html/fietskleding.html#fietsMuts">Fietsmuts</a>
+    <a href="../html/fietskleding.html#fietsSokken">Fietssokken</a>
+    <a href="../html/fietskleding.html#fietsPak">Fietspak</a>
+    <a href="../html/fietskleding.html#fietsShirt">Fietsshirt</a>
+  </div>
+
+  <input type="checkbox" id="accessoiresToggleMobile">
+  <label for="accessoiresToggleMobile" class="mobile-subMenuButton">Accessoires</label>
+  <div class="mobile-sub-dropdown-content">
+    <a href="../html/accessoires.html#fietsKlok">Fietsklok</a>
+    <a href="../html/accessoires.html#sportHorloge">Sporthorloge</a>
+    <a href="../html/accessoires.html#nekWarmer">Nekwarmer</a>
+    <a href="../html/accessoires.html#reflecterendeArmband">Reflecterende Armband</a>
+    <a href="../html/accessoires.html#fietsHelm">Fietshelm</a>
+    <a href="../html/accessoires.html#fietsTas">Fietstas</a>
+    <a href="../html/accessoires.html#telefoonHouder">Telefoonhouder</a>
+    <a href="../html/accessoires.html#fietsSlot">Fietsslot</a>
+  </div>
+</div>
 
         <a class="hamburgerMenuButton" href="../html/contact.html">Contact</a>
       </div>
@@ -111,56 +189,56 @@
       </div>
 
       <div class="product-grid">
-        <div class="product-item">
+        <div class="product-item" id="fietsKlok">
           <img src="../img/Accessoires_Klok.png" alt="Accessoires_Klok.png" class="productImage">
           <h2>Fietsklok</h2>
           <p>€69,99</p>
           <a href="#" class="catalougeBtn">Bekijk Informatie</a>
           <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
         </div>
-        <div class="product-item">
+        <div class="product-item" id="sportHorloge">
           <img src="../img/Accessoires_Horloge.png" alt="Accessoires_Horloge.png" class="productImage">
           <h2>Sporthorloge</h2>
           <p>€99,99</p>
           <a href="productPageWatch.html" class="catalougeBtn" title="Hier kun je klikken!">Bekijk Informatie</a>
           <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
         </div>
-        <div class="product-item">
+        <div class="product-item" id="nekWarmer">
           <img src="../img/Accessoires_Nekwarmer.png" alt="Accessoires_Nekwarmer.png" class="productImage">
           <h2>Nekwarmer</h2>
           <p>€19,99</p>
           <a href="#" class="catalougeBtn">Bekijk Informatie</a>
           <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
         </div>
-        <div class="product-item">
+        <div class="product-item" id="reflecterendeArmband">
           <img src="../img/Accessoires_Armband.png" alt="Accessoires_Armband.png" class="productImage">
           <h2>Reflecterende Armband</h2>
           <p>€12,49</p>
           <a href="#" class="catalougeBtn">Bekijk Informatie</a>
           <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
         </div>
-        <div class="product-item">
+        <div class="product-item" id="fietsHelm">
           <img src="../img/Accessoires_Helm.png" alt="Accessoires_Helm.png" class="productImage">
           <h2>Fietshelm</h2>
           <p>€59,99</p>
           <a href="#" class="catalougeBtn">Bekijk Informatie</a>
           <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
         </div>
-        <div class="product-item">
+        <div class="product-item" id="fietsTas">
           <img src="../img/Accessoires_Tas.png" alt="Accessoires_Tas.png" class="productImage">
           <h2>Fietstas</h2>
           <p>€14,50</p>
           <a href="#" class="catalougeBtn">Bekijk Informatie</a>
           <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
         </div>
-        <div class="product-item">
+        <div class="product-item" id="telefoonHouder">
           <img src="../img/Accessoires_Telefoonhouder.png" alt="Accessoires_Telefoonhouder.png" class="productImage">
           <h2>Telefoonhouder</h2>
           <p>€29,99</p>
           <a href="#" class="catalougeBtn">Bekijk Informatie</a>
           <a href="#" class="catalougeBtn">Toevoegen aan winkelmand</a>
         </div>
-        <div class="product-item">
+        <div class="product-item" id="fietsSlot">
           <img src="../img/Accessoires_Fietsslot.png" alt="Accessoires_Fietsslot.png" class="productImage">
           <h2>Fietsslot</h2>
           <p>€39,99</p>

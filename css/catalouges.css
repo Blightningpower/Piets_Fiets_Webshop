@@ -47,20 +47,6 @@ h1 {
     min-width: 7rem;
 }
 
-.catalougeBtn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: .375rem;
-    max-width: fit-content;
-    border: none;
-    margin: 2%;
-    max-width: 119px;
-    min-width: 11vw;
-}
-
 @media only screen and (max-width: 820px) {
     .product-grid {
         display: flex;
